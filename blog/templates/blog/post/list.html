@@ -4,7 +4,7 @@
     Блог
 {% endblock title %}
 {% block content %}
-    <h1>Блог</h1>
+    <!-- <h1>Блог</h1> -->
     {% if tag %}
     <h2>
         Posts tagged with '{{ tag.name }}'
@@ -15,23 +15,20 @@
             <a href="{{ post.get_absolute_url }}">
                 {{ post.title }}
             </a>
-            <p class="tags">
-                Tags:
-                {% for tag in post.tags.all %}
-                    <a href='{% url "blog:post_list_by_tag" tag.slug %}'>
-                        {{ tag.name }}
-                    </a>
-                    {% if not forloop.last %}, {%endif%}
-                {%endfor%}
-
-
         </h2>
-
+        <p class="tags">
+            Tags:
+            {% for tag in post.tags.all %}
+                <a href='{% url "blog:post_list_by_tag" tag.slug %}'>
+                    {{ tag.name }}
+                </a>
+                {% if not forloop.last %}, {%endif%}
+            {%endfor%}
 
         <p class="date">
             Публикации {{ post.publish }} by {{ post.author }}
         </p>
-        {{ post.body|markdown|truncatewords_html:30}}
+        <div class="posts">{{ post.body|markdown|truncatewords_html:30}}</div>
 
     {% endfor %}
     {% include "blog/pagination.html" with page=posts %}
