@@ -11,7 +11,7 @@ body {
   color: rgb(203, 240, 243);
   line-height: 2em;
   font-size: 1.1em;
-  scroll-behavior: smooth; /* from CODEPEN*/
+  scroll-behavior: smooth;
 }
 
 /* --- ANIMATED BACKGROUND --- */
@@ -55,9 +55,14 @@ li {
 ul {
     padding-left: 0px;
 }
+
 /* --- HEADER --- */
 
+
 header {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 100vh;
     position: relative;
     padding: 20px;
 }
@@ -201,9 +206,8 @@ input[type=submit] {
     border-bottom: 1px solid rgb(244, 248, 248);
     padding-top: 20px;
 }
+
 /* pagination */
 .pagination {
     font-weight: bold;
 }
-
-
