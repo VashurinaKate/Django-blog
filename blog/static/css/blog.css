@@ -60,8 +60,8 @@ ul {
 
 
 header {
-    height: 200px;
-    width: 200px;
+    height: fit-content;
+    width: fit-content;
     margin-bottom: 100vh;
     position: relative;
     padding: 20px;
@@ -210,4 +210,18 @@ input[type=submit] {
 /* pagination */
 .pagination {
     font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+    height: auto;
+}
+.footer-menu {
+    float: right;
+}
+.footer-menu ul {
+    display: flex;
+}
+.footer-menu li {
+    padding: 0 20px;
 }
